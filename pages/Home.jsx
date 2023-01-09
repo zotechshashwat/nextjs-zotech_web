@@ -34,7 +34,7 @@ const Home1 = () => {
         </Box>
       </Box>
       <Services />
-    </>pca
+    </>
   );
 };
 
