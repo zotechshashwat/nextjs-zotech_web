@@ -8,54 +8,23 @@ import {
 } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import { careerContent, cardCareer, careerPerk } from "../Static/Utils";
-import React from "react";
+import React, { useEffect } from "react";
 import EmpForm from "../Components/Empform";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Career = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <>
-      <Box
-        component="div"
-        className="careerbackground"
-        //   sx={{
-        //     display: "flex",
-        //     alignItems: "center",
-        //     justifyContent: "center",
-        //     height: "80vh",
-        //     marginBottom: "12px",
-        //     backgroundImage: `url(${"./assets/logo.jpg"})`,
-        //     backgroundImage: `linear-gradient(
-        //   360deg,
-        //   rgba(0, 0, 0, 0.01),
-        //   rgba(0, 0, 0, 0.9)
-        // ),url(${"https://www.elaunchinfotech.com/frontend/assets/images/career.jpg"})`,
-        //     backgroundSize: "cover",
-        //     backgroundPosition: "center",
-        //     backgroundAttachment: "fixed",
-
-        //     backgroundRepeat: "no-repeat",
-        //   }}
-      >
-        <Box
-          component="div"
-          className="contentbox"
-          // sx={{
-          //   padding: "5px",
-          //   color: "white",
-          // }}
-        >
-          <Typography
-            variant="h3"
-            className="contentheading1"
-            // sx={{ fontWeight: "bold", fontSize: "3rem" }}
-          >
+      <Box component="div" className="careerbackground">
+        <Box component="div" className="contentbox" data-aos="fade-right">
+          <Typography variant="h3" className="contentheading1">
             If You’ve Got Powerful Skills,
           </Typography>
-          <Typography
-            variant="h1"
-            className="contentheading2"
-            // sx={{ fontWeight: "bold", fontSize: "2rem" }}
-          >
+          <Typography variant="h1" className="contentheading2">
             We Have a Place For You To Shine!
           </Typography>
         </Box>

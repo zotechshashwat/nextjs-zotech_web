@@ -1,52 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Faq from "../Components/Faq";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <>
-      <Box
-        component="div"
-        className="aboutbackground"
-        // sx={{
-        //   display: "flex",
-        //   alignItems: "center",
-        //   justifyContent: "center",
-        //   height: "80vh",
-        //   marginBottom: "12px",
-        //   backgroundImage: `linear-gradient(
-        //     320deg,
-        //     rgba(0, 0, 0, 0.01),
-        //     rgba(0, 0, 0, 0.9)
-        //   ),url(${"https://airoxa.in//wp-content/uploads/2020/06/bg-14.jpg"})`,
-        //   backgroundSize: "cover",
-        //   backgroundPosition: "center",
-        //   backgroundAttachment: "fixed",
-
-        //   backgroundRepeat: "no-repeat",
-        // }}
-      >
-        <Box
-          component="div"
-          className="contentbox"
-          // sx={{
-          //   padding: "5px",
-          //   color: "white",
-          // }}
-        >
-          <Typography
-            variant="h3"
-            className="contentheading1"
-            // sx={{ fontWeight: "bold", fontSize: "3rem" }}
-          >
+      <Box component="div" className="aboutbackground">
+        <Box component="div" className="contentbox" data-aos="fade-right">
+          <Typography variant="h3" className="contentheading1">
             All You Need to Know About Us
           </Typography>
-          <Typography
-            variant="h1"
-            className="contentheading2"
-            // sx={{ fontWeight: "bold", fontSize: "2rem" }}
-          >
+          <Typography variant="h1" className="contentheading2">
             We Converted Our Ideas into Reality with Powerful Technologies.
           </Typography>
         </Box>
@@ -200,13 +170,10 @@ const About = () => {
 
       <Container className="missioncontainer">
         <Grid container mt={5} spacing={1}>
-          <Grid item lg={6} sm={12}>
+          <Grid item lg={6} sm={12} data-aos="fade-up">
             <Box
               component="img"
               className="missionimage"
-              // sx={{
-              //   borderRadius: "20px",
-              // }}
               src="/assets/mission.jpg"
             />
 
@@ -236,9 +203,7 @@ const About = () => {
             <Box
               component="img"
               className="visionimage"
-              // sx={{
-              //   borderRadius: "20px",
-              // }}
+              data-aos="fade-up"
               src="/assets/vision.jpg"
             />
 
@@ -278,11 +243,12 @@ const About = () => {
           variant="h3"
           align="center"
           sx={{ marginTop: "50px", fontWeight: "bold" }}
+          data-aos="fade-up"
         >
           Why choose Us.
         </Typography>
         <Grid container>
-          <Grid item lg={6} mt={5}>
+          <Grid item lg={6} mt={5} data-aos="fade-up">
             <Typography variant="h4" fontWeight="bold">
               WE DRIVE VISION INTO ACTION
             </Typography>
@@ -291,7 +257,13 @@ const About = () => {
             </Box>
           </Grid>
 
-          <Grid item lg={6} sm={12} sx={{ marginTop: "10px" }}>
+          <Grid
+            item
+            lg={6}
+            sm={12}
+            sx={{ marginTop: "10px" }}
+            data-aos="fade-up"
+          >
             <Typography variant="body1">
               We are providing world class services to the clients,
               understanding the client's problem from their perspective giving

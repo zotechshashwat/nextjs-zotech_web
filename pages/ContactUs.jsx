@@ -1,6 +1,6 @@
 import { Card, CardContent, Grid, Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
-import React from "react";
+import React, { useEffect } from "react";
 import Form from "../Components/Form";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -9,6 +9,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { testimonials } from "../Static/Utils";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contactus = () => {
   var settings = {
@@ -47,65 +49,32 @@ const Contactus = () => {
       },
     ],
   };
-
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <>
-      <Box
-        component="div"
-        className="contactbackground"
-        //   sx={{
-        //     display: "flex",
-        //     alignItems: "center",
-        //     justifyContent: "center",
-        //     height: "80vh",
-        //     marginBottom: "12px",
-        //     backgroundImage: `linear-gradient(
-        //   360deg,
-        //   rgba(0, 0, 0, 0.01),
-        //   rgba(0, 0, 0, 0.9)
-        // ),url(${"https://www.elaunchinfotech.com/frontend/assets/images/contact-us.jpg"})`,
-        //     backgroundSize: "cover",
-        //     backgroundPosition: "center",
-        //     backgroundAttachment: "fixed",
-
-        //     backgroundRepeat: "no-repeat",
-        //   }}
-      >
-        <Box
-          component="div"
-          className="contentbox"
-          // sx={{
-          //   padding: "5px",
-          //   color: "white",
-          // }}
-        >
-          <Typography
-            variant="h3"
-            className="contentheading1"
-            // sx={{ fontWeight: "bold", fontSize: "3rem" }}
-          >
+      <Box component="div" className="contactbackground">
+        <Box component="div" className="contentbox" data-aos="fade-right">
+          <Typography variant="h3" className="contentheading1">
             Want to inquire more about us?
           </Typography>
-          <Typography
-            variant="h1"
-            className="contentheading2"
-            // sx={{ fontWeight: "bold", fontSize: "2rem" }}
-          >
+          <Typography variant="h1" className="contentheading2">
             Let’s discuss the details about your dream project.
           </Typography>
         </Box>
       </Box>
 
-      <Typography variant="h4" align="center" mt={5}>
+      <Typography variant="h4" align="center" mt={5} data-aos="fade-up">
         We appreciate your impact!
       </Typography>
-      <Typography variant="h4" align="center">
+      <Typography variant="h4" align="center" data-aos="fade-up">
         Talk in details about your project with us.
       </Typography>
 
       <Container>
         <Grid container spacing={10}>
-          <Grid item lg={8}>
+          <Grid item lg={8} data-aos="zoom-in">
             <Form />
           </Grid>
           <Grid item lg={4}>
@@ -152,20 +121,7 @@ const Contactus = () => {
             Testimonial
           </Typography>
 
-          <Slider
-            className="slider"
-            {...settings}
-            // style={{
-            //   width: "40%",
-            //   textAlign: "center",
-            //   marginTop: "50px",
-            //   borderRadius: "20px",
-            //   display: "flex",
-            //   justifyContent: "center",
-            //   margin: "auto",
-            //   background: "#f8f9fa",
-            // }}
-          >
+          <Slider className="slider" {...settings}>
             {testimonials.map((e, index) => {
               return (
                 <>
