@@ -88,7 +88,7 @@ const Contactus = () => {
             <Typography variant="body1" display="flex" mt={5}>
               <LocationOnIcon />
               <span style={{ marginLeft: "10px" }}>
-                34 Street Name, City Name Here, United States
+                319, Prime shoppers, Vesu, Surat,Gujarat 394518
               </span>
             </Typography>
             <Typography variant="body1" display="flex" mt={5}>
