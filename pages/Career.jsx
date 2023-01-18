@@ -18,7 +18,7 @@ const Career = () => {
     AOS.init({ duration: 1500 });
   }, []);
   return (
-    <>
+    <Box className="career">
       <Box component="div" className="careerbackground">
         <Box component="div" className="contentbox" data-aos="fade-right">
           <Typography variant="h3" className="contentheading1">
@@ -179,7 +179,7 @@ const Career = () => {
           );
         })}
       </Container>
-    </>
+    </Box>
   );
 };
 

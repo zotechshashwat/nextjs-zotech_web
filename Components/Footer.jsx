@@ -5,15 +5,22 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <Box component="div" sx={{ backgroundColor: "#1c1c1c",marginTop:"70px" }}>
+      <Box
+        component="div"
+        sx={{ backgroundColor: "#1c1c1c", marginTop: "70px" }}
+      >
         <Container>
           <Grid container>
             <Grid item lg={12} xs={12}>
               <Typography
-                variant="h1"
+                variant="h2"
                 fontWeight="bold"
                 color="white"
                 align="center"
+                display="flex"
+                justifyContent="center"
+                margin="auto"
+                paddingTop="30px"
               >
                 Zotech
               </Typography>
@@ -21,15 +28,16 @@ const Footer = () => {
           </Grid>
         </Container>
 
-        <Box mt={1}>
+        <Box>
           <Container>
-            <Grid container mt={4}>
+            <Grid container alignItems="center">
               <Grid item lg={6} xs={12}>
                 <Typography
                   variant="h6"
                   color="white"
                   sx={{
                     textAlign: { md: "center", lg: "left", xs: "center" },
+                    fontWeight: "bold",
                   }}
                 >
                   About Us
@@ -50,13 +58,13 @@ const Footer = () => {
                   color="white"
                   sx={{
                     marginTop: { xs: "20px" },
+                    fontWeight: "bold",
                   }}
                 >
                   Corporate Office
                 </Typography>
                 <Typography color="white">
-                  A/301 , RJD Business Hub, Nagina Vadi Rd, New Pushpakunj
-                  Society, Katargam, Surat, Gujarat 395004
+                  319, Prime shoppers, Vesu, Surat,Gujarat 394518
                 </Typography>
               </Grid>
               <Grid item lg={3} xs={12}>
@@ -65,6 +73,7 @@ const Footer = () => {
                   color="white"
                   sx={{
                     marginTop: { xs: "20px" },
+                    fontWeight: "bold",
                   }}
                 >
                   Contact Us
@@ -81,7 +90,7 @@ const Footer = () => {
                     +91 9512596661
                   </a>
                 </Typography>
-                <Typography color="white" mt={3}>
+                <Typography color="white" mt={1}>
                   <a
                     style={{
                       color: "white",

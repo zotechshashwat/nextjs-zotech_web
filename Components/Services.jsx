@@ -34,25 +34,14 @@ const Services = () => {
                 }}
               >
                 <Grid item lg={6} xs={12}>
-                  <h1
+                  <Typography
                     variant="h4"
                     justifyContent="center"
                     className="servicecontentheading"
-                    // style={{
-                    //   fontSize: 34,
-                    //   fontWeight: "bold",
-                    //   marginTop: "120px",
-                    //   color: "black",
-                    //   textAlign: "left",
-                    // }}
                   >
                     {heading}
-                  </h1>
-                  <Typography
-                    variant="body1"
-                    className="servicecontentdetails"
-                    // sx={{ marginTop: "10px", textAlign: "left" }}
-                  >
+                  </Typography>
+                  <Typography variant="body1" className="servicecontentdetails">
                     {details}
                   </Typography>
                 </Grid>
@@ -61,12 +50,6 @@ const Services = () => {
                   <Box
                     component="img"
                     className="servicecontentimage"
-                    // sx={{
-                    //   width: "90%",
-                    //   height: "auto",
-                    //   marginBottom: "50px",
-                    //   borderRadius: "20px",
-                    // }}
                     src={imgSrc}
                   />
                 </Grid>
@@ -83,34 +66,14 @@ const Services = () => {
                   <Box
                     component="img"
                     className="servicecontentimage"
-                    // sx={{
-                    //   width: "80%",
-                    //   height: "auto",
-                    //   marginBottom: "50px",
-                    //   borderRadius: "20px",
-                    // }}
                     src={imgSrc}
                   />
                 </Grid>
                 <Grid item lg={6} xs={12}>
-                  <h1
-                    variant="h4"
-                    className="servicecontentheading"
-                    // style={{
-                    //   fontSize: 34,
-                    //   fontWeight: "bold",
-                    //   marginTop: "120px",
-                    //   color: "black",
-                    //   textAlign: "left",
-                    // }}
-                  >
+                  <Typography variant="h4" className="servicecontentheading">
                     {heading}
-                  </h1>
-                  <Typography
-                    variant="body1"
-                    className="servicecontentdetails"
-                    // sx={{ marginTop: "10px", textAlign: "left" }}
-                  >
+                  </Typography>
+                  <Typography variant="body1" className="servicecontentdetails">
                     {details}
                   </Typography>
                 </Grid>

@@ -10,7 +10,7 @@ const About = () => {
     AOS.init({ duration: 1500 });
   }, []);
   return (
-    <>
+    <Box className="about">
       <Box component="div" className="aboutbackground">
         <Box component="div" className="contentbox" data-aos="fade-right">
           <Typography variant="h3" className="contentheading1">
@@ -45,38 +45,14 @@ const About = () => {
               component="img"
               data-aos="zoom-in"
               className="startedimage"
-              // sx={{
-              //   width: "75%",
-              //   height: "auto",
-              //   borderRadius: "20px",
-              // }}
               src="/assets/started.jpg"
             />
           </Grid>
           <Grid item lg={6} xs={12} data-aos="fade-up">
-            <Typography
-              variant="h4"
-              className="startedheading"
-              // sx={{
-              //   fontSize: 34,
-              //   fontWeight: "bold",
-              //   textAlign: "left",
-              //   marginTop: "10px",
-              //   color: "black",
-              // }}
-            >
+            <Typography variant="h4" className="startedheading">
               How We Started
             </Typography>
-            <Typography
-              variant="body1"
-              className="startedcontent"
-              // sx={{
-              //   fontSize: 17,
-              //   marginTop: "10px",
-              //   textAlign: "left",
-              //   color: "black",
-              // }}
-            >
+            <Typography variant="body1" className="startedcontent">
               Zotech Solution Pvt. Ltd. is one of the most trusted Software
               development companies of India today. With a futuristic vision to
               grow in the tech industry, this company passionately in 2012 with
@@ -97,29 +73,10 @@ const About = () => {
 
         <Grid container spacing={5} sx={{ marginTop: "100px" }}>
           <Grid item lg={6} xs={12} data-aos="fade-up">
-            <Typography
-              variant="h4"
-              className="startedheading"
-              // sx={{
-              //   fontSize: 34,
-              //   fontWeight: "bold",
-              //   textAlign: "left",
-              //   marginTop: { lg: "50px" },
-              //   color: "black",
-              // }}
-            >
+            <Typography variant="h4" className="startedheading">
               How We Grew
             </Typography>
-            <Typography
-              variant="body1"
-              className="startedcontent"
-              // sx={{
-              //   fontSize: 17,
-              //   marginTop: "10px",
-              //   textAlign: "left",
-              //   color: "black",
-              // }}
-            >
+            <Typography variant="body1" className="startedcontent">
               Our company grew leaps and bounds with over 1250+ successful
               projects till date. For more than a decade, we have been
               delivering software development solutions and empowering
@@ -137,13 +94,7 @@ const About = () => {
               component="img"
               data-aos="zoom-in"
               className="startedimage"
-              sx={{ marginLeft: { lg: "100px" } }}
-              // sx={{
-              //   width: "75%",
-              //   height: "auto",
-              //   marginLeft: { lg: "100px" },
-              //   borderRadius: "20px",
-              // }}
+              // sx={{ marginLeft: { lg: "100px" } }}
               src="/assets/grew.jpg"
             />
           </Grid>
@@ -284,7 +235,7 @@ const About = () => {
           </Grid>
         </Grid>
       </Container>
-    </>
+    </Box>
   );
 };
 

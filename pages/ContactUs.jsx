@@ -128,8 +128,14 @@ const Contactus = () => {
                   <Box
                     component="div"
                     sx={{
-                      height: "300px",
-                      background: "#f8f9fa",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      margin: "auto",
+                      width: "100%",
+                      height: "390px",
+                      // background: "#f8f9fa",
                       color: "black",
                     }}
                   >
@@ -137,7 +143,7 @@ const Contactus = () => {
                       variant="h6"
                       color="black"
                       align="center"
-                      sx={{ marginTop: "40px" }}
+                      sx={{ marginTop: "10px", width: "90%" }}
                     >
                       {e.des}
                     </Typography>

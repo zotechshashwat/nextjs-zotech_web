@@ -9,12 +9,11 @@ import Button from "@mui/material/Button";
 import { Container } from "@mui/system";
 import Drawer1 from "./Drawer";
 import { navbar } from "../Static/Utils";
-import { Typography } from "@mui/material";
+import { List, ListItemText, Typography } from "@mui/material";
 import Link from "next/link";
 
 export default function Navbar() {
   const [color, setColor] = useState(false);
-  const [show, setShow] = useState();
   const [open, setOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -26,18 +25,20 @@ export default function Navbar() {
   const navRef = React.useRef();
   navRef.current = color;
 
-  React.useEffect(() => {
-    if (show >= 120) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  }, [show]);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 100) {
+        setColor(true);
+      } else {
+        setColor(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
 
-  // window.addEventListener("scroll", function (event) {
-  //   let scroll_y = this.scrollY;
-  //   setShow(scroll_y);
-  // });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -48,7 +49,7 @@ export default function Navbar() {
         id="nav"
         sx={{
           backgroundColor: color ? "#1c1c1c" : "transparent",
-          height: "90px",
+          height: "60px",
           boxShadow: "none",
         }}
       >
@@ -64,10 +65,9 @@ export default function Navbar() {
               <MenuIcon />
             </IconButton>
             <Typography
-              variant="h2"
+              variant="h4"
               sx={{
                 textDecoration: "none",
-                fontWeight: "bold",
                 color: "white",
                 display: "flex",
                 textAlign: "center",
@@ -86,12 +86,13 @@ export default function Navbar() {
               }}
             >
               {navbar.map((e, index) => (
-                <Link href={e.path}>
+                <Link href={e.path} style={{ textDecoration: "none" }}>
                   <Button
                     key={index}
                     sx={{
                       marginLeft: "10px",
                       color: "white",
+                      textDecoration: "none",
                       "&:hover": {
                         borderBottom: "2px solid white",
                         backgroundColor: "transparent",
